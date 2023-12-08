@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <style>
+    /* CSS styles for the sidebar and buttons */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .sidebar {
+      width: 200px;
+      height: 100vh;
+      background-color: #333;
+      color: #fff;
+      float: left;
+    }
+
+    .sidebar ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sidebar li {
+      padding: 10px;
+      cursor: pointer;
+      border-bottom: 1px solid #555;
+    }
+
+    .sidebar li:last-child {
+      border-bottom: none;
+    }
+
+    .sidebar li a {
+      display: block;
+      font-weight: bold;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .sidebar li:hover {
+      background-color: #555;
+    }
+
+    .content {
+      margin-left: 200px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100vh;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      font-size: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <ul>
+      <li><a href="#user-activity">User Activity</a></li>
+      <li><a href="#user-subscription">User Subscription</a></li>
+      <li><a href="#view-report">View Report</a></li>
+      <li><a href="#view-feedback">View Feedback</a></li>
+      <li><a href="#view-prediction">View Prediction</a></li>
+    </ul>
+  </div>
+  <div class="content">
+    <h1>Admin Dashboard</h1>
+    <p>Select an option from the sidebar to view details.</p>
+     <h2>#Software under Development</h2>
+  </div>
+  <div class="footer">
+    &copy; 2023 Admin Dashboard. All rights reserved.
+  </div>
+</body>
+</html>

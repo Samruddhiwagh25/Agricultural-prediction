@@ -1,0 +1,250 @@
+{% extends 'layout.html' %} {% block body %}
+
+<style>
+
+    html body {
+      background-color:turquoise;
+
+      
+  }
+
+  
+</style>
+<!--Form Section-->
+<br /><br />
+<h2 style="text-align: center; margin: 0px; color: black">
+  <b>Milk Production</b>
+</h2>
+<br />
+
+<div
+  style="
+    width: 350px;
+    height: 50rem;
+    margin: 0px auto;
+    color: black;
+    border-radius: 25px;
+    padding: 10px 10px;
+  "
+>
+  <form method="POST" action="{{ url_for('predictmilk') }}">
+    
+     <div class="form-group">
+       <label for="parity" style="font-size: 17px"><b>The number of lactations a cow has had.</b></label>
+       <input
+         type="number"
+         step="0.01"
+         class="form-control"
+         id="parity"
+         name="parity"
+         placeholder="Enter the value  "
+         style="font-weight: bold"
+         required
+       />
+     </div>
+     
+
+<div class="form-group">
+      <label for="herd" style="font-size: 17px"
+        ><b>select herd id</b></label>
+      <select
+        name="herd"
+        class="form-control"
+        id="herd"
+        placeholder="Select a herd"
+        style="font-weight: bold"
+        required
+      >
+        <option selected>Select herd</option>
+        <option>10000201 </option>
+        <option>10000203 </option>
+        <option>10002501 </option>
+        <option> 10004002 </option>
+        <option>10009001 </option>
+       <option> 11020702 </option>
+       <option>20002801</option>
+       <option>20002805</option>
+       <option>20006901</option>
+       <option>20009404</option>
+       <option>20009405</option>
+       <option> 20009406</option>
+        <option>20009408</option>
+       <option>20009409</option>
+      <option>20009410</option>
+      <option>20009801</option>
+      <option>20015401</option>
+      <option>20016102</option>
+      <option>20016401</option>
+      <option>20016701</option>
+      <option>20017101</option>
+      <option>20017601</option>
+      <option> 20017801</option>
+      <option>20018101</option>
+      <option> 20019501</option> 
+      <option>20019801</option>
+      <option>20021301</option>
+      <option>20102802</option>
+      <option>20102808</option>
+      <option>20109411</option>
+     <option>20116403</option>
+     <option>20119502</option>
+     <option>35012201</option>
+     <option>35013401</option>
+     <option>35013402</option>
+     <option>35015301</option>
+    <option>35015901</option>
+    <option>35017101</option>
+    <option>35017102</option>
+    <option>35017201</option>
+    <option>35018101</option>
+    <option>35019201</option>
+    <option>35019401</option>
+    <option>35020101</option>
+    <option>35022201</option>
+    <option>55001801</option>
+    <option>55002601</option>
+    <option>55005208</option>
+    <option>55005215</option>
+   <option>26000901</option>
+   <option>26001101</option>
+   <option>26001110</option>
+   <option>26001801</option>
+   <option>26001810</option>
+   <option>26002501</option>
+   <option>26002502</option>
+   <option>26002510</option>
+   <option>26002901</option>
+   <option>26004401</option>
+   <option>26004502</option>
+   <option>26004510</option>
+   <option>26004901</option>
+   <option>26004902</option>
+   <option>26004910</option>
+   <option>26005802</option>
+   <option>26005803</option>
+   <option>26005812</option>
+   <option>26008301</option>
+   <option>26008302</option>
+   <option>26008310</option>
+   <option>26008402</option>
+   <option>26009110</option>
+   <option>26010010</option>
+   <option>26010401</option>
+   <option>26010402</option>
+   <option>26010410</option>
+   <option>26010411</option>
+   <option>26010801</option>
+    <option>26011001</option>
+    <option>26011010</option>
+    <option>26011202</option>
+    <option>26011210</option>
+    <option>26011301</option>
+    <option>26011310</option>
+    <option>26011801</option>
+    <option>26011811</option>
+    <option>26012201</option>
+    <option>26013201</option>
+    <option>26013202</option>
+    <option>26013210</option>
+    <option>26013212</option>
+    <option>26013301</option>
+    <option>26013901</option>
+    <option>26013910</option>
+    <option>26014101</option>
+    <option>26014110</option>
+    <option>26014201</option>
+    <option>26014501</option>
+    <option>26014601</option>
+    <option>26014701</option>
+    <option>26014710</option>
+    <option>26015501</option>
+         </select>
+    </div>
+
+
+    <div class="form-group">
+      <label for="year" style="font-size: 17px"
+        ><b>year.</b></label
+      >
+      <input
+        type="number"
+        class="form-control"
+        id="year"
+        name="year"
+        placeholder="Enter the value (example:2025)"
+        style="font-weight: bold"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="DIM" style="font-size: 17px"><b> The number of days since the cow gave birth</b></label>
+      <input
+        type="number"
+        class="form-control"
+        id="DIM"
+        name="DIM"
+        placeholder="Enter the value 200"
+        style="font-weight: bold"
+        required
+      />
+    </div>
+   
+    <div class="form-group">
+      <label for="MPQ" style="font-size: 17px"><b>Milk protein quantity</b></label>
+      <input
+        type="number"
+        class="form-control"
+        id="MPQ"
+        name="MPQ"
+        placeholder="Enter the value 0 or 1 "
+        style="font-weight: bold"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="seasson" style="font-size: 17px"><b>seasson</b></label>
+      <input
+        type="number"
+        class="form-control"
+        id="seasson"
+        name="seasson"
+        placeholder="1:summer, 2:spring, 3:rainy, 4:winter"
+        style="font-weight: bold"
+        required
+      />
+    </div>
+    
+     <div class="form-group">
+       <label for="SLSCC" style="font-size: 17px"><b>Somatic cell count</b></label>
+       <input
+         type="number"
+         step="0.01"
+         class="form-control"
+         id="SLSCC"
+         name="SLSCC"
+         placeholder="Enter the value:(example: 3.4)"
+         style="font-weight: bold"
+         required
+       />
+     </div>
+
+    
+
+
+ <div class="d-flex justify-content-center">
+      <button
+        type="submit"
+        class="btn btn-info"
+        style="color: black; font-weight: bold; width: 130px; height:50px; border-radius:12px; font-size: 21px;"
+      >
+        Predict
+      </button>
+    </div>
+  </form>
+</div>
+
+
+
+<!-- Form section -->
+
+{% endblock %}

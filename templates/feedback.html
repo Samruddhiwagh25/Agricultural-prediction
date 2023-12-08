@@ -1,0 +1,94 @@
+{% extends 'layout.html' %} {% block body %}
+
+<style>
+
+    html body {
+      background-color:turquoise;
+
+      
+  }
+
+  
+</style>
+<!--Form Section-->
+<br /><br />
+<h2 style="text-align: center; margin: 0px; color: black">
+  <b>Feedback Please </b>
+</h2>
+<br />
+
+<div
+  style="
+    width: 350px;
+    height: 50rem;
+    margin: 0px auto;
+    color: black;
+    border-radius: 25px;
+    padding: 10px 10px;
+  "
+>
+  <form method="POST" action="{{ url_for('fbk') }}">
+    <div class="form-group">
+      <label for="Q1" style="font-size: 17px"><b>Was this prediction is helpful</b></label>
+      <input
+        type="Text"
+        class="form-control"
+        id="Q1"
+        name="Q!"
+        style="font-weight: bold"
+        required
+      />
+
+    <div class="form-group">
+      <label for="Q2" style="font-size: 17px"><b> How would you rate overall experience </b></label>
+      <input
+        type="Text"
+        class="form-control"
+        id="Q2"
+        name="Q2"
+        style="font-weight: bold"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="Q3" style="font-size: 17px"><b>What Feature can we add to improve? </b></label>
+      <input
+        type="Text"
+        class="form-control"
+        id="Q3"
+        name="Q3"
+        style="font-weight: bold"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="Q4" style="font-size: 17px"><b>Any suggestion</b></label>
+      <input
+        type="text"
+        class="form-control"
+        id="Q4"
+        name="Q4"
+        style="font-weight: bold"
+        required
+      />
+   <br>
+   <br>
+   <br>
+
+    <div class="d-flex justify-content-center">
+      <button
+        type="submit"
+        class="btn btn-info"
+        style="color: black; font-weight: bold; width: 130px; height:50px; border-radius:12px; font-size: 21px;"
+      >
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
+
+
+
+<!-- Form section -->
+
+{% endblock %}

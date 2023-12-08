@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Razorpay Payment</title>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+    <h1>Payment Details</h1>
+    <p>Amount: {{ amount }}</p>
+    <p>Order ID: {{ order_id }}</p>
+
+    <script>
+        var options = {
+            "key": "{{ key_id }}",
+            "amount": "{{ amount }}",
+            "currency": "INR",
+            "name": "Your Company Name",
+            "description": "Payment for your order",
+            "order_id": "{{ order_id }}",
+            "handler": function (response){
+                // Handle the payment success
+                alert('Payment successful! Payment ID: ' + response.razorpay_payment_id);
+                window.location.href = "/";  // Redirect to homepage
+            },
+            "prefill": {
+                "name": "John Doe",
+                "email": "john@example.com",
+                "contact": "+919876543210"
+            }
+        };
+
+        var rzp1 = new Razorpay(options);
+        rzp1.on('payment.failed', function (response){
+            // Handle the payment failure
+            alert('Payment failed!');
+        });
+
+        document.onload = rzp1.open();
+    </script>
+</body>
+</html>

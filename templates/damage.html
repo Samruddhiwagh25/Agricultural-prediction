@@ -1,0 +1,172 @@
+{% extends 'layout.html' %} {% block body %}
+
+<style>
+
+    html body {
+      background-color:turquoise;
+
+      
+  }
+
+  
+</style>
+<!--Form Section-->
+<br /><br />
+<h2 style="text-align: center; margin: 0px; color: black">
+  <b>Check the Damage in the crop</b>
+</h2>
+<br />
+
+<div
+  style="
+    width: 350px;
+    height: 50rem;
+    margin: 0px auto;
+    color: black;
+    border-radius: 25px;
+    padding: 10px 10px;
+  "
+>
+  <form method="POST" action="{{ url_for('sam') }}">
+    
+     <div class="form-group">
+       <label for="Estimated_Insects_Count" style="font-size: 17px"><b>Estimated Insects Count</b></label>
+       <input
+         type="number"
+         step="0.01"
+         class="form-control"
+         id="Estimated_Insects_Count"
+         name="Estimated_Insects_Count"
+         placeholder="Enter the value (example 1678)"
+         style="font-weight: bold"
+         required
+       />
+     </div>
+     
+     
+    <div class="form-group">
+          <label for="Crop_Type" style="font-size: 17px"
+            ><b>Enter value for Crop Type (Kharif: 0, Rabi : 1) </b></label>
+          <input
+            type="number"
+            step="0.01"
+            class="form-control"
+            id="Crop_Type"
+            name="Crop_Type"
+            placeholder="Enter the value"
+            style="font-weight: bold"
+            required
+          />
+        </div>
+ 
+ 
+ <div class="form-group">
+       <label for="Soil_Type" style="font-size: 17px"
+         ><b>Enter value for Soil Type (Alluvial: 0, Black-Cotton: 1 )</b></label>
+       <input
+         type="number"
+         step="0.01"
+         class="form-control"
+         id="Soil_Type"
+         name="Soil_Type"
+         placeholder="Enter the value"
+         style="font-weight: bold"
+         required
+       />
+     </div>
+ 
+ 
+ <div class="form-group">
+       <label for="Pesticide_Use_Category" style="font-size: 17px"
+         ><b>Enter Pesticide Use (Insecticides: 0, Bactericides: 1, Herbicides: 2 ) </b></label>
+       <input
+         type="number"
+         step="0.01"
+         class="form-control"
+         id="Pesticide_Use_Category"
+         name="Pesticide_Use_Category"
+         placeholder="Enter the value"
+         style="font-weight: bold"
+         required
+       />
+     </div>
+
+
+ 
+
+<div class="form-group">
+  <label for="Number_Doses_Week" style="font-size: 17px"
+    ><b>Number Doses per Week</b></label>
+  <input
+    type="number"
+    class="form-control"
+    id="Number_Doses_Week"
+    name="Number_Doses_Week"
+    placeholder="Enter the value (example:1)"
+    style="font-weight: bold"
+    required
+  />
+</div>
+
+
+
+<div class="form-group">
+  <label for="Number_Weeks_Used" style="font-size: 17px"><b> Number Weeks Used</b></label>
+  <input
+    type="number"
+    class="form-control"
+    id="Number_Weeks_Used"
+    name="Number_Weeks_Used"
+    placeholder="Enter the value "
+    style="font-weight: bold"
+    required
+  />
+</div>
+
+
+
+
+
+
+   
+  <div class="form-group">
+        <label for="Season" style="font-size: 17px"
+          ><b> Season (Summer: 0, Monsoon: 1,Winter: 2)</b></label>
+         <input
+           type="number"
+           class="form-control"
+           id="Season"
+           name="Season"
+           placeholder="Enter the value "
+           style="font-weight: bold"
+           required
+         />
+       </div>
+
+   
+   
+   
+    
+    
+     
+     
+    
+
+
+ <div class="d-flex justify-content-center">
+      <button
+        type="submit"
+        class="btn btn-info"
+        style="color: black; font-weight: bold; width: 130px; height:50px; border-radius:12px; font-size: 21px;"
+      >
+        Predict
+      </button>
+    </div>
+  </form>
+</div>
+
+
+
+<!-- Form section -->
+
+{% endblock %}

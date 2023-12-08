@@ -1,0 +1,144 @@
+{% extends 'layout.html' %} {% block body %}
+
+<style>
+
+    html body {
+      background-color:turquoise;
+
+      
+  }
+
+  
+</style>
+<!--Form Section-->
+<br /><br />
+<h2 style="text-align: center; margin: 0px; color: black">
+  <b>check your quality of milk</b>
+</h2>
+<br />
+
+<div
+  style="
+    width: 350px;
+    height: 50rem;
+    margin: 0px auto;
+    color: black;
+    border-radius: 25px;
+    padding: 10px 10px;
+  "
+>
+  <form method="POST" action="{{ url_for('milk_Qua') }}">
+    
+     <div class="form-group">
+       <label for="pH" style="font-size: 17px"><b>pH level</b></label>
+       <input
+         type="number"
+         step="0.01"
+         class="form-control"
+         id="pH"
+         name="pH"
+         placeholder="Enter the value"
+         style="font-weight: bold"
+         required
+       />
+     </div>
+     
+    <div class="form-group">
+      <label for="Temprature" style="font-size: 17px"
+        ><b>Temprature</b></label
+      >
+      <input
+        type="number"
+        class="form-control"
+        id="Temprature"
+        name="Temprature"
+        placeholder="Enter the value (example:40)"
+        style="font-weight: bold"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="Taste" style="font-size: 17px"><b>Taste</b></label>
+      <input
+        type="number"
+        class="form-control"
+        id="Taste"
+        name="Taste"
+        placeholder="Enter the value 0 or 1 "
+        style="font-weight: bold"
+        required
+      />
+    </div>
+   
+    <div class="form-group">
+      <label for="Odor" style="font-size: 17px"><b>Odor</b></label>
+      <input
+        type="number"
+        class="form-control"
+        id="Odor"
+        name="Odor"
+        placeholder="Enter the value 0 or 1 "
+        style="font-weight: bold"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="Fat" style="font-size: 17px"><b>Fat</b></label>
+      <input
+        type="number"
+        class="form-control"
+        id="Fat"
+        name="Fat"
+        placeholder="Enter the value 0 or 1"
+        style="font-weight: bold"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="Turbidity" style="font-size: 17px"><b>Turbidity</b></label>
+      <input
+        type="number"
+        class="form-control"
+        id="Turbidity"
+        name="Turbidity"
+        placeholder="Enter the value 0 or 1"
+        style="font-weight: bold"
+        required
+      />
+
+    </div>
+
+ <div class="form-group">
+      <label for="Colour" style="font-size: 17px"><b>Colour value</b></label>
+      <input
+        type="number"
+        class="form-control"
+        id="Colour"
+        name="Colour"
+        placeholder="Enter the value (example:255) "
+        style="font-weight: bold"
+        required
+      />
+
+    </div>
+
+   
+
+    <div class="d-flex justify-content-center">
+      <button
+        type="submit"
+        class="btn btn-info"
+        style="color: black; font-weight: bold; width: 130px; height:50px; border-radius:12px; font-size: 21px;"
+      >
+        Predict
+      </button>
+    </div>
+  </form>
+</div>
+
+
+
+<!-- Form section -->
+
+{% endblock %}

@@ -1,0 +1,935 @@
+{% extends 'layout.html' %} {% block body %}
+
+<style>
+
+    html body {
+      background-color:turquoise;
+
+      
+  }
+
+  
+</style>
+<!--Form Section-->
+<br /><br />
+<h2 style="text-align: center; margin: 0px; color: black">
+  <b>Get  Your crop production</b>
+</h2>
+<br />
+
+<div
+  style="
+    width: 350px;
+    height: 50rem;
+    margin: 0px auto;
+    color: black;
+    border-radius: 25px;
+    padding: 10px 10px;
+  "
+>
+  <form method="POST" action="{{ url_for('aprod') }}">
+  <div class="form-group">
+    <label for="State_Name" style="font-size: 17px"
+      ><b>select state</b></label>
+    <select
+      name="State_Name"
+      class="form-control"
+      id="State_Name"
+      placeholder="Select a State"
+      style="font-weight: bold"
+      required
+    >
+    <option selected>Select state</option>
+    <option>Andhra Pradesh</option>
+    <option>Andaman and Nicobar Islands</option>
+    <option>Arunachal Pradesh</option>
+    <option>Assam</option>
+    <option>Bihar</option>
+    <option>Chandigarh</option>
+    <option>Chhattisgarh</option>
+    <option>Dadra and Nagar Haveli</option>
+    <option>Goa</option>
+    <option>Gujarat</option>
+    <option>Haryana</option>
+    <option>Himachal Pradesh</option>
+    <option>Jammu and Kashmir </option>
+    <option>Jharkhand</option>
+    <option>Karnataka</option>
+    <option>Kerala</option>
+    <option>Madhya Pradesh</option>
+    <option>Maharashtra</option>
+    <option>Manipur</option>
+    <option>Meghalaya</option>
+    <option>Mizoram</option>
+    <option>Nagaland</option>
+    <option>Odisha</option>
+    <option>Puducherry</option>
+    <option>Punjab</option>
+    <option>Rajasthan</option>
+    <option>Sikkim</option>
+    <option>Tamil Nadu</option>
+    <option>Telangana </option>
+    <option>Tripura</option>
+    <option>Uttar Pradesh</option>
+    <option>Uttarakhand</option>
+    <option>West Bengal</option>  
+    </select>
+  </div>
+
+
+
+
+  <div class="form-group">
+    <label for="District_Name" style="font-size: 17px"
+      ><b>select district</b></label>
+    <select
+      name="District_Name"
+      class="form-control"
+      id="District_Name"
+      placeholder="Select a district"
+      style="font-weight: bold"
+      required
+    > 
+  <option selected>Select District</option> 
+  <option value="24 PARAGANAS NORTH">24 PARAGANAS NORTH</option>
+  <option value="24 PARAGANAS SOUTH">24 PARAGANAS SOUTH</option>
+  <option value="ADILABAD">ADILABAD</option>
+  <option value="AGRA">AGRA</option>
+  <option value="AHMADABAD">AHMADABAD</option>
+  <option value="AHMEDNAGAR">AHMEDNAGAR</option>
+  <option value="AIZAWL">AIZAWL</option>
+  <option value="AJMER">AJMER</option>
+  <option value="AKOLA">AKOLA</option>
+  <option value="ALAPPUZHA">ALAPPUZHA</option>
+  <option value="ALIGARH">ALIGARH</option>
+  <option value="ALIRAJPUR">ALIRAJPUR</option>
+  <option value="ALLAHABAD">ALLAHABAD</option>
+  <option value="ALMORA">ALMORA</option>
+  <option value="ALWAR">ALWAR</option>
+  <option value="AMBALA">AMBALA</option>
+  <option value="AMBEDKAR NAGAR">AMBEDKAR NAGAR</option>
+  <option value="AMETHI">AMETHI</option>
+  <option value="AMRAVATI">AMRAVATI</option>
+  <option value="AMRELI">AMRELI</option>
+  <option value="AMRITSAR">AMRITSAR</option>
+  <option value="AMROHA">AMROHA</option>
+  <option value="ANAND">ANAND</option>
+  <option value="ANANTAPUR">ANANTAPUR</option>
+  <option value="ANANTNAG">ANANTNAG</option>
+  <option value="ANJAW">ANJAW</option>
+  <option value="ANUGUL">ANUGUL</option>
+  <option value="ANUPPUR">ANUPPUR</option>
+  <option value="ARARIA">ARARIA</option>
+  <option value="ARIYALUR">ARIYALUR</option>
+  <option value="ARWAL">ARWAL</option>
+  <option value="ASHOKNAGAR">ASHOKNAGAR</option>
+  <option value="AURAIYA">AURAIYA</option>
+  <option value="AURANGABAD">AURANGABAD</option>
+  <option value="AZAMGARH">AZAMGARH</option>
+  <option value="BADGAM">BADGAM</option>
+  <option value="BAGALKOT">BAGALKOT</option>
+  <option value="BAGESHWAR">BAGESHWAR</option>
+  <option value="BAGHPAT">BAGHPAT</option>
+  <option value="BAHRAICH">BAHRAICH</option>
+  <option value="BAKSA">BAKSA</option>
+  <option value="BALAGHAT">BALAGHAT</option>
+  <option value="BALANGIR">BALANGIR</option>
+  <option value="BALESHWAR">BALESHWAR</option>
+  <option value="BALLIA">BALLIA</option>
+  <option value="BALRAMPUR">BALRAMPUR</option>
+  <option value="BANAS KANTHA">BANAS KANTHA</option>
+  <option value="BANDA">BANDA</option>
+  <option value="BANDIPORA">BANDIPORA</option>
+  <option value="BANGALORE RURAL">BANGALORE RURAL</option>
+  <option value="BANGALORE URBAN">BANGALORE URBAN</option>
+  <option value="BANKA">BANKA</option>
+  <option value="BANKURA">BANKURA</option>
+  <option value="BANSWARA">BANSWARA</option>
+  <option value="BARABANKI">BARABANKI</option>
+  <option value="BARAMULLA">BARAMULLA</option>
+  <option value="BARAN">BARAN</option>
+  <option value="BARDHAMAN">BARDHAMAN</option>
+  <option value="BAREILLY">BAREILLY</option>
+  <option value="BARGARH">BARGARH</option>
+  <option value="BARODA">BARODA</option>
+  <option value="BARPETA">BARPETA</option>
+  <option value="BARWANI">BARWANI</option>
+  <option value="BASTAR">BASTAR</option>
+  <option value="BASTI">BASTI</option>
+  <option value="BATHINDA">BATHINDA</option>
+  <option value="BEED">BEED</option>
+  <option value="BEGUSARAI">BEGUSARAI</option>
+  <option value="BELGAUM">BELGAUM</option>
+  <option value="BELLARY">BELLARY</option>
+  <option value="BETUL">BETUL</option>
+  <option value="BHABUA">BHABUA</option>
+  <option value="BHADRAK">BHADRAK</option>
+  <option value="BHAGALPUR">BHAGALPUR</option>
+  <option value="BHANDARA">BHANDARA</option>
+  <option value="BHARATPUR">BHARATPUR</option>
+  <option value="BHARUCH">BHARUCH</option>
+  <option value="BHATINDA">BHATINDA</option>
+  <option value="BHILWARA">BHILWARA</option>
+  <option value="BHIND">BHIND</option>
+  <option value="BHIWANI">BHIWANI</option>
+  <option value="BHOJPUR">BHOJPUR</option>
+  <option value="BHOPAL">BHOPAL</option>
+  <option value="BIDAR">BIDAR</option>
+  <option value="BIJAPUR">BIJAPUR</option>
+  <option value="BIJNOR">BIJNOR</option>
+  <option value="BIKANER">BIKANER</option>
+  <option value="BILASPUR">BILASPUR</option>
+  <option value="BIRBHUM">BIRBHUM</option>
+  <option value="BISHNUPUR">BISHNUPUR</option>
+  <option value="BOKARO">BOKARO</option>
+  <option value="BONGAIGAON">BONGAIGAON</option>
+  <option value="BOKARO">BOKARO</option>
+  <option value="BOUDH">BOUDH</option>
+  <option value="BUDAUN">BUDAUN</option>
+  <option value="BULANDSHAHR">BULANDSHAHR</option>
+  <option value="BULDHANA">BULDHANA</option>
+  <option value="BUNDI">BUNDI</option>
+  <option value="BURDWAN">BURDWAN</option>
+  <option value="BURHANPUR">BURHANPUR</option>
+  <option value="BUXAR">BUXAR</option>
+  <option value="CACHAR">CACHAR</option>
+  <option value="CENTRAL DELHI">CENTRAL DELHI</option>
+  <option value="CHAMARAJANAGAR">CHAMARAJANAGAR</option>
+  <option value="CHAMBA">CHAMBA</option>
+  <option value="CHAMOLI">CHAMOLI</option>
+  <option value="CHAMPIONG">CHAMPIONG</option>
+  <option value="CHAMPHAI">CHAMPHAI</option>
+  <option value="CHANDAULI">CHANDAULI</option>
+  <option value="CHANDEL">CHANDEL</option>
+  <option value="CHANDIGARH">CHANDIGARH</option>
+  <option value="CHANDRAPUR">CHANDRAPUR</option>
+  <option value="CHANGLANG">CHANGLANG</option>
+  <option value="CHATRA">CHATRA</option>
+  <option value="CHHATARPUR">CHHATARPUR</option>
+  <option value="CHHINDWARA">CHHINDWARA</option>
+  <option value="CHIKBALLAPUR">CHIKBALLAPUR</option>
+  <option value="CHIKMAGALUR">CHIKMAGALUR</option>
+  <option value="CHIRANG">CHIRANG</option>
+  <option value="CHITRADURGA">CHITRADURGA</option>
+  <option value="CHITRAKOOT">CHITRAKOOT</option>
+  <option value="CHITTOOR">CHITTOOR</option>
+  <option value="CHITTORGARH">CHITTORGARH</option>
+  <option value="CHURACHANDPUR">CHURACHANDPUR</option>
+  <option value="CHURU">CHURU</option>
+  <option value="COIMBATORE">COIMBATORE</option>
+  <option value="COOCHBEHAR">COOCHBEHAR</option>
+  <option value="CUDDALORE">CUDDALORE</option>
+  <option value="CUTTACK">CUTTACK</option>
+  <option value="DADRA AND NAGAR HAVELI">DADRA AND NAGAR HAVELI</option>
+  <option value="DAKSHIN KANNAD">DAKSHIN KANNAD</option>
+  <option value="DAMOH">DAMOH</option>
+  <option value="DANG">DANG</option>
+  <option value="DANTEWADA">DANTEWADA</option>
+  <option value="DARBHANGA">DARBHANGA</option>
+  <option value="DARJEELING">DARJEELING</option>
+  <option value="DARRANG">DARRANG</option>
+  <option value="DATIA">DATIA</option>
+  <option value="DAUSA">DAUSA</option>
+  <option value="DAVANGERE">DAVANGERE</option>
+  <option value="DEHRADUN">DEHRADUN</option>
+  <option value="DEOGARH">DEOGARH</option>
+  <option value="DEOGHAR">DEOGHAR</option>
+  <option value="DEORIA">DEORIA</option>
+  <option value="DEWAS">DEWAS</option>
+  <option value="DHALAI">DHALAI</option>
+  <option value="DHAMTARI">DHAMTARI</option>
+  <option value="DHANBAD">DHANBAD</option>
+  <option value="DHAR">DHAR</option>
+  <option value="DHARMAPURI">DHARMAPURI</option>
+  <option value="DHARWAD">DHARWAD</option>
+  <option value="DHEMAJI">DHEMAJI</option>
+  <option value="DHENKANAL">DHENKANAL</option>
+  <option value="DHOLPUR">DHOLPUR</option>
+  <option value="DHUBRI">DHUBRI</option>
+  <option value="DHULE">DHULE</option>
+  <option value="DIBANG VALLEY">DIBANG VALLEY</option>
+  <option value="DIBRUGARH">DIBRUGARH</option>
+  <option value="DIMA HASAO">DIMA HASAO</option>
+  <option value="DIMAPUR">DIMAPUR</option>
+  <option value="DINAJPUR DAKSHIN">DINAJPUR DAKSHIN</option>
+  <option value="DINAJPUR UTTAR">DINAJPUR UTTAR</option>
+  <option value="DINDIGUL">DINDIGUL</option>
+  <option value="DINDORI">DINDORI</option>
+  <option value="DODA">DODA</option>
+  <option value="DOHAD">DOHAD</option>
+  <option value="DUMKA">DUMKA</option>
+  <option value="DUNGARPUR">DUNGARPUR</option>
+  <option value="DURG">DURG</option>
+  <option value="EAST DISTRICT">EAST DISTRICT</option>
+  <option value="EAST GARO HILLS">EAST GARO HILLS</option>
+  <option value="EAST GODAVARI">EAST GODAVARI</option>
+  <option value="EAST JAINTIA HILLS">EAST JAINTIA HILLS</option>
+  <option value="EAST KAMENG">EAST KAMENG</option>
+  <option value="EAST KHASI HILLS">EAST KHASI HILLS</option>
+  <option value="EAST SIANG">EAST SIANG</option>
+  <option value="EAST SINGHBUM">EAST SINGHBUM</option>
+  <option value="ERNAKULAM">ERNAKULAM</option>
+  <option value="ERODE">ERODE</option>
+  <option value="ETAH">ETAH</option>
+  <option value="ETAWAH">ETAWAH</option>
+  <option value="FAIZABAD">FAIZABAD</option>
+  <option value="FARIDABAD">FARIDABAD</option>
+  <option value="FARIDKOT">FARIDKOT</option>
+  <option value="FARRUKHABAD">FARRUKHABAD</option>
+  <option value="FATEHABAD">FATEHABAD</option>
+  <option value="FATEHGARH SAHIB">FATEHGARH SAHIB</option>
+  <option value="FATEHPUR">FATEHPUR</option>
+  <option value="FIROZABAD">FIROZABAD</option>
+  <option value="FIROZEPUR">FIROZEPUR</option>
+  <option value="GADAG">GADAG</option>
+  <option value="GADCHIROLI">GADCHIROLI</option>
+  <option value="GAJAPATI">GAJAPATI</option>
+  <option value="GANDERBAL">GANDERBAL</option>
+  <option value="GANDHINAGAR">GANDHINAGAR</option>
+  <option value="GANGANAGAR">GANGANAGAR</option>
+  <option value="GANJAM">GANJAM</option>
+  <option value="GARHWA">GARHWA</option>
+  <option value="GAUTAM BUDDHA NAGAR">GAUTAM BUDDHA NAGAR</option>
+  <option value="GAYA">GAYA</option>
+  <option value="GHAZIABAD">GHAZIABAD</option>
+  <option value="GHAZIPUR">GHAZIPUR</option>
+  <option value="GIRIDIH">GIRIDIH</option>
+  <option value="GOALPARA">GOALPARA</option>
+  <option value="GODDA">GODDA</option>
+  <option value="GOLAGHAT">GOLAGHAT</option>
+  <option value="GONDA">GONDA</option>
+  <option value="GONDIA">GONDIA</option>
+  <option value="GOPALGANJ">GOPALGANJ</option>
+  <option value="GORAKHPUR">GORAKHPUR</option>
+  <option value="GULBARGA">GULBARGA</option>
+  <option value="GUMLA">GUMLA</option>
+  <option value="GUNA">GUNA</option>
+  <option value="GUNTUR">GUNTUR</option>
+  <option value="GURDASPUR">GURDASPUR</option>
+  <option value="GURGAON">GURGAON</option>
+  <option value="GWALIOR">GWALIOR</option>
+  <option value="HAILAKANDI">HAILAKANDI</option>
+  <option value="HAMIRPUR">HAMIRPUR</option>
+  <option value="HANUMANGARH">HANUMANGARH</option>
+  <option value="HARDA">HARDA</option>
+  <option value="HARDOI">HARDOI</option>
+  <option value="HARIDWAR">HARIDWAR</option>
+  <option value="HASSAN">HASSAN</option>
+  <option value="HATHRAS">HATHRAS</option>
+  <option value="HAVERI">HAVERI</option>
+  <option value="HAZARIBAGH">HAZARIBAGH</option>
+  <option value="HINGOLI">HINGOLI</option>
+  <option value="HISAR">HISAR</option>
+  <option value="HOOGHLY">HOOGHLY</option>
+  <option value="HOSHANGABAD">HOSHANGABAD</option>
+  <option value="HOSHIARPUR">HOSHIARPUR</option>
+  <option value="HOWRAH">HOWRAH</option>
+  <option value="HYDERABAD">HYDERABAD</option>
+  <option value="IDUKKI">IDUKKI</option>
+  <option value="IMPHAL EAST">IMPHAL EAST</option>
+  <option value="IMPHAL WEST">IMPHAL WEST</option>
+  <option value="INDORE">INDORE</option>
+  <option value="JABALPUR">JABALPUR</option>
+  <option value="JAGATSINGHAPUR">JAGATSINGHAPUR</option>
+  <option value="JAIPUR">JAIPUR</option>
+  <option value="JAISALMER">JAISALMER</option>
+  <option value="JAJAPUR">JAJAPUR</option>
+  <option value="JALANDHAR">JALANDHAR</option>
+  <option value="JALAUN">JALAUN</option>
+  <option value="JALGAON">JALGAON</option>
+  <option value="JALNA">JALNA</option>
+  <option value="JALORE">JALORE</option>
+  <option value="JALPAIGURI">JALPAIGURI</option>
+  <option value="JAMMU">JAMMU</option>
+  <option value="JAMNAGAR">JAMNAGAR</option>
+  <option value="JAMTARA">JAMTARA</option>
+  <option value="JAMUI">JAMUI</option>
+  <option value="JANJGIR-CHAMPA">JANJGIR-CHAMPA</option>
+  <option value="JASHPUR">JASHPUR</option>
+  <option value="JAUNPUR">JAUNPUR</option>
+  <option value="JEHANABAD">JEHANABAD</option>
+  <option value="JHABUA">JHABUA</option>
+  <option value="JHAJJAR">JHAJJAR</option>
+  <option value="JHALAWAR">JHALAWAR</option>
+  <option value="JHANSI">JHANSI</option>
+  <option value="JHARSUGUDA">JHARSUGUDA</option>
+  <option value="JHUNJHUNU">JHUNJHUNU</option>
+  <option value="JIND">JIND</option>
+  <option value="JODHPUR">JODHPUR</option>
+  <option value="JORHAT">JORHAT</option>
+  <option value="JUNAGADH">JUNAGADH</option>
+  <option value="KABIRDHAM">KABIRDHAM</option>
+  <option value="KACHCHH">KACHCHH</option>
+  <option value="KADAPA">KADAPA</option>
+  <option value="KAIMUR (BHABUA)">KAIMUR (BHABUA)</option>
+  <option value="KAITHAL">KAITHAL</option>
+  <option value="KALAHANDI">KALAHANDI</option>
+  <option value="KAMRUP">KAMRUP</option>
+  <option value="KAMRUP METRO">KAMRUP METRO</option>
+  <option value="KANCHIPURAM">KANCHIPURAM</option>
+  <option value="KANDHAMAL">KANDHAMAL</option>
+  <option value="KANGRA">KANGRA</option>
+  <option value="KANKER">KANKER</option>
+  <option value="KANNAUJ">KANNAUJ</option>
+  <option value="KANNIYAKUMARI">KANNIYAKUMARI</option>
+  <option value="KANNUR">KANNUR</option>
+  <option value="KANPUR DEHAT">KANPUR DEHAT</option>
+  <option value="KANPUR NAGAR">KANPUR NAGAR</option>
+  <option value="KAPURTHALA">KAPURTHALA</option>
+  <option value="KARAIKAL">KARAIKAL</option>
+  <option value="KARAULI">KARAULI</option>
+  <option value="KARBI ANGLONG">KARBI ANGLONG</option>
+  <option value="KARGIL">KARGIL</option>
+  <option value="KARIMGANJ">KARIMGANJ</option>
+  <option value="KARIMNAGAR">KARIMNAGAR</option>
+  <option value="KARNAL">KARNAL</option>
+  <option value="KARUR">KARUR</option>
+  <option value="KASARAGOD">KASARAGOD</option>
+  <option value="KASGANJ">KASGANJ</option>
+  <option value="KATHUA">KATHUA</option>
+  <option value="KATIHAR">KATIHAR</option>
+  <option value="KATNI">KATNI</option>
+  <option value="KAUSHAMBI">KAUSHAMBI</option>
+  <option value="KENDRAPARA">KENDRAPARA</option>
+  <option value="KENDUJHAR">KENDUJHAR</option>
+  <option value="KHAGARIA">KHAGARIA</option>
+  <option value="KHAMMAM">KHAMMAM</option>
+  <option value="KHANDWA">KHANDWA</option>
+  <option value="KHARGONE">KHARGONE</option>
+  <option value="KHEDA">KHEDA</option>
+  <option value="KHERI">KHERI</option>
+  <option value="KHORDHA">KHORDHA</option>
+  <option value="KHUNTI">KHUNTI</option>
+  <option value="KINNAUR">KINNAUR</option>
+  <option value="KIPHIRE">KIPHIRE</option>
+  <option value="KISHANGANJ">KISHANGANJ</option>
+  <option value="KISHTWAR">KISHTWAR</option>
+  <option value="KODAGU">KODAGU</option>
+  <option value="KODERMA">KODERMA</option>
+  <option value="KOHIMA">KOHIMA</option>
+  <option value="KOKRAJHAR">KOKRAJHAR</option>
+  <option value="KOLAR">KOLAR</option>
+  <option value="KOLASIB">KOLASIB</option>
+  <option value="KOLHAPUR">KOLHAPUR</option>
+  <option value="KOLLAM">KOLLAM</option>
+  <option value="KOPPAL">KOPPAL</option>
+  <option value="KORAPUT">KORAPUT</option>
+  <option value="KORBA">KORBA</option>
+  <option value="KOREA">KOREA</option>
+  <option value="KOTA">KOTA</option>
+  <option value="KOTTAYAM">KOTTAYAM</option>
+  <option value="KOZHIKODE">KOZHIKODE</option>
+  <option value="KRISHNA">KRISHNA</option>
+  <option value="KRISHNAGIRI">KRISHNAGIRI</option>
+  <option value="KULGAM">KULGAM</option>
+  <option value="KULLU">KULLU</option>
+  <option value="KUPWARA">KUPWARA</option>
+  <option value="KURNOOL">KURNOOL</option>
+  <option value="KURUKSHETRA">KURUKSHETRA</option>
+  <option value="KURUNG KUMEY">KURUNG KUMEY</option>
+  <option value="KUSHI NAGAR">KUSHI NAGAR</option>
+  <option value="LAHUL AND SPITI">LAHUL AND SPITI</option>
+  <option value="LAKHIMPUR">LAKHIMPUR</option>
+  <option value="LAKHISARAI">LAKHISARAI</option>
+  <option value="LALITPUR">LALITPUR</option>
+  <option value="LATEHAR">LATEHAR</option>
+  <option value="LATUR">LATUR</option>
+  <option value="LAWNGTLAI">LAWNGTLAI</option>
+  <option value="LEH LADAKH">LEH LADAKH</option>
+  <option value="LOHARDAGA">LOHARDAGA</option>
+  <option value="LOHIT">LOHIT</option>
+  <option value="LONGLENG">LONGLENG</option>
+  <option value="LOWER DIBANG VALLEY">LOWER DIBANG VALLEY</option>
+  <option value="LOWER SUBANSIRI">LOWER SUBANSIRI</option>
+  <option value="LUCKNOW">LUCKNOW</option>
+  <option value="LUDHIANA">LUDHIANA</option>
+  <option value="LUNGLEI">LUNGLEI</option>
+  <option value="MADHEPURA">MADHEPURA</option>
+  <option value="MADHUBANI">MADHUBANI</option>
+  <option value="MADURAI">MADURAI</option>
+  <option value="MAHARAJGANJ">MAHARAJGANJ</option>
+  <option value="MAHASAMUND">MAHASAMUND</option>
+  <option value="MAHBUBNAGAR">MAHBUBNAGAR</option>
+  <option value="MAHE">MAHE</option>
+  <option value="MAHENDRAGARH">MAHENDRAGARH</option>
+  <option value="MAHESANA">MAHESANA</option>
+  <option value="MAHOBA">MAHOBA</option>
+  <option value="MAINPURI">MAINPURI</option>
+  <option value="MALAPPURAM">MALAPPURAM</option>
+  <option value="MALDAH">MALDAH</option>
+  <option value="MALKANGIRI">MALKANGIRI</option>
+  <option value="MAMIT">MAMIT</option>
+  <option value="MANDI">MANDI</option>
+  <option value="MANDLA">MANDLA</option>
+  <option value="MANDSAUR">MANDSAUR</option>
+  <option value="MANDYA">MANDYA</option>
+  <option value="MANSA">MANSA</option>
+  <option value="MARIGAON">MARIGAON</option>
+  <option value="MATHURA">MATHURA</option>
+  <option value="MAU">MAU</option>
+  <option value="MAYURBHANJ">MAYURBHANJ</option>
+  <option value="MEDAK">MEDAK</option>
+  <option value="MEDINIPUR EAST">MEDINIPUR EAST</option>
+  <option value="MEDINIPUR WEST">MEDINIPUR WEST</option>
+  <option value="MEERUT">MEERUT</option>
+  <option value="MEWAT">MEWAT</option>
+  <option value="MIRZAPUR">MIRZAPUR</option>
+  <option value="MOGA">MOGA</option>
+  <option value="MOKOKCHUNG">MOKOKCHUNG</option>
+  <option value="MON">MON</option>
+  <option value="MORADABAD">MORADABAD</option>
+  <option value="MORENA">MORENA</option>
+  <option value="MUKTSAR">MUKTSAR</option>
+  <option value="MUMBAI">MUMBAI</option>
+  <option value="MUNGER">MUNGER</option>
+  <option value="MURSHIDABAD">MURSHIDABAD</option>
+  <option value="MUZAFFARNAGAR">MUZAFFARNAGAR</option>
+  <option value="MUZAFFARPUR">MUZAFFARPUR</option>
+  <option value="MYSORE">MYSORE</option>
+  <option value="NABARANGPUR">NABARANGPUR</option>
+  <option value="NADIA">NADIA</option>
+  <option value="NAGAON">NAGAON</option>
+  <option value="NAGAPATTINAM">NAGAPATTINAM</option>
+  <option value="NAGAUR">NAGAUR</option>
+  <option value="NAGPUR">NAGPUR</option>
+  <option value="NAINITAL">NAINITAL</option>
+  <option value="NALANDA">NALANDA</option>
+  <option value="NALBARI">NALBARI</option>
+  <option value="NALGONDA">NALGONDA</option>
+  <option value="NAMAKKAL">NAMAKKAL</option>
+  <option value="NANDED">NANDED</option>
+  <option value="NANDURBAR">NANDURBAR</option>
+  <option value="NARAYANPUR">NARAYANPUR</option>
+  <option value="NARMADA">NARMADA</option>
+  <option value="NARSINGHPUR">NARSINGHPUR</option>
+  <option value="NASHIK">NASHIK</option>
+  <option value="NAVSARI">NAVSARI</option>
+  <option value="NAWADA">NAWADA</option>
+  <option value="NAWANSHAHR">NAWANSHAHR</option>
+  <option value="NAYAGARH">NAYAGARH</option>
+  <option value="NEEMUCH">NEEMUCH</option>
+  <option value="NICOBARS">NICOBARS</option>
+  <option value="NIZAMABAD">NIZAMABAD</option>
+  <option value="NORTH AND MIDDLE ANDAMAN">NORTH AND MIDDLE ANDAMAN</option>
+  <option value="NORTH DISTRICT">NORTH DISTRICT</option>
+  <option value="NORTH GOA">NORTH GOA</option>
+  <option value="NORTH TRIPURA">NORTH TRIPURA</option>
+  <option value="NUAPADA">NUAPADA</option>
+  <option value="OSMANABAD">OSMANABAD</option>
+  <option value="PAKUR">PAKUR</option>
+  <option value="PALAKKAD">PALAKKAD</option>
+  <option value="PALAMU">PALAMU</option>
+  <option value="PALI">PALI</option>
+  <option value="PALWAL">PALWAL</option>
+  <option value="PANCH MAHALS">PANCH MAHALS</option>
+  <option value="PANCHKULA">PANCHKULA</option>
+  <option value="PANIPAT">PANIPAT</option>
+  <option value="PANNA">PANNA</option>
+  <option value="PAPUM PARE">PAPUM PARE</option>
+  <option value="PARBHANI">PARBHANI</option>
+  <option value="PASHCHIM CHAMPARAN">PASHCHIM CHAMPARAN</option>
+  <option value="PATAN">PATAN</option>
+  <option value="PATHANAMTHITTA">PATHANAMTHITTA</option>
+  <option value="PATIALA">PATIALA</option>
+  <option value="PATNA">PATNA</option>
+  <option value="PAURI GARHWAL">PAURI GARHWAL</option>
+  <option value="PERAMBALUR">PERAMBALUR</option>
+  <option value="PEREN">PEREN</option>
+  <option value="PHEK">PHEK</option>
+  <option value="PILIBHIT">PILIBHIT</option>
+  <option value="PITHORAGARH">PITHORAGARH</option>
+  <option value="PONDICHERRY">PONDICHERRY</option>
+  <option value="POONCH">POONCH</option>
+  <option value="PORBANDAR">PORBANDAR</option>
+  <option value="PRAKASAM">PRAKASAM</option>
+  <option value="PRATAPGARH">PRATAPGARH</option>
+  <option value="PUDUKKOTTAI">PUDUKKOTTAI</option>
+  <option value="PULWAMA">PULWAMA</option>
+  <option value="PUNE">PUNE</option>
+  <option value="PURBI CHAMPARAN">PURBI CHAMPARAN</option>
+  <option value="PURI">PURI</option>
+  <option value="PURNIA">PURNIA</option>
+  <option value="PURULIA">PURULIA</option>
+  <option value="RAE BARELI">RAE BARELI</option>
+  <option value="RAICHUR">RAICHUR</option>
+  <option value="RAIGAD">RAIGAD</option>
+  <option value="RAIGARH">RAIGARH</option>
+  <option value="RAIPUR">RAIPUR</option>
+  <option value="RAISEN">RAISEN</option>
+  <option value="RAJAURI">RAJAURI</option>
+  <option value="RAJGARH">RAJGARH</option>
+  <option value="RAJKOT">RAJKOT</option>
+  <option value="RAJNANDGAON">RAJNANDGAON</option>
+  <option value="RAJSAMAND">RAJSAMAND</option>
+  <option value="RAMANAGARA">RAMANAGARA</option>
+  <option value="RAMANATHAPURAM">RAMANATHAPURAM</option>
+  <option value="RAMBAN">RAMBAN</option>
+  <option value="RAMGARH">RAMGARH</option>
+  <option value="RAMPUR">RAMPUR</option>
+  <option value="RANCHI">RANCHI</option>
+  <option value="RANGAREDDI">RANGAREDDI</option>
+  <option value="RATLAM">RATLAM</option>
+  <option value="RATNAGIRI">RATNAGIRI</option>
+  <option value="RAYAGADA">RAYAGADA</option>
+  <option value="REASI">REASI</option>
+  <option value="REWA">REWA</option>
+  <option value="REWARI">REWARI</option>
+  <option value="RI BHOI">RI BHOI</option>
+  <option value="ROHTAK">ROHTAK</option>
+  <option value="ROHTAS">ROHTAS</option>
+  <option value="RUDRA PRAYAG">RUDRA PRAYAG</option>
+  <option value="RUPNAGAR">RUPNAGAR</option>
+  <option value="S.A.S NAGAR">S.A.S NAGAR</option>
+  <option value="SABAR KANTHA">SABAR KANTHA</option>
+  <option value="SAGAR">SAGAR</option>
+  <option value="SAHARANPUR">SAHARANPUR</option>
+  <option value="SAHARSA">SAHARSA</option>
+  <option value="SAHEBGANJ">SAHEBGANJ</option>
+  <option value="SAIHA">SAIHA</option>
+  <option value="SALEM">SALEM</option>
+  <option value="SAMASTIPUR">SAMASTIPUR</option>
+  <option value="SAMBA">SAMBA</option>
+  <option value="SAMBALPUR">SAMBALPUR</option>
+  <option value="SANGLI">SANGLI</option>
+  <option value="SANGRUR">SANGRUR</option>
+  <option value="SANT KABEER NAGAR">SANT KABEER NAGAR</option>
+  <option value="SANT RAVIDAS NAGAR">SANT RAVIDAS NAGAR</option>
+  <option value="SARAIKELA KHARSAWAN">SARAIKELA KHARSAWAN</option>
+  <option value="SARAN">SARAN</option>
+  <option value="SATARA">SATARA</option>
+  <option value="SATNA">SATNA</option>
+  <option value="SAWAI MADHOPUR">SAWAI MADHOPUR</option>
+  <option value="SEHORE">SEHORE</option>
+  <option value="SENAPATI">SENAPATI</option>
+  <option value="SEONI">SEONI</option>
+  <option value="SERCHHIP">SERCHHIP</option>
+  <option value="SHAHDOL">SHAHDOL</option>
+  <option value="SHAHJAHANPUR">SHAHJAHANPUR</option>
+  <option value="SHAJAPUR">SHAJAPUR</option>
+  <option value="SHEIKHPURA">SHEIKHPURA</option>
+  <option value="SHEOHAR">SHEOHAR</option>
+  <option value="SHEOPUR">SHEOPUR</option>
+  <option value="SHIMLA">SHIMLA</option>
+  <option value="SHIMOGA">SHIMOGA</option>
+  <option value="SHIVPURI">SHIVPURI</option>
+  <option value="SHOPIAN">SHOPIAN</option>
+  <option value="SHRAVASTI">SHRAVASTI</option>
+  <option value="SIDDHARTH NAGAR">SIDDHARTH NAGAR</option>
+  <option value="SIDHI">SIDHI</option>
+  <option value="SIKAR">SIKAR</option>
+  <option value="SIMDEGA">SIMDEGA</option>
+  <option value="SINDHUDURG">SINDHUDURG</option>
+  <option value="SINGRAULI">SINGRAULI</option>
+  <option value="SIRMAUR">SIRMAUR</option>
+  <option value="SIROHI">SIROHI</option>
+  <option value="SIRSA">SIRSA</option>
+  <option value="SITAMARHI">SITAMARHI</option>
+  <option value="SITAPUR">SITAPUR</option>
+  <option value="SIVAGANGA">SIVAGANGA</option>
+  <option value="SIVASAGAR">SIVASAGAR</option>
+  <option value="SIWAN">SIWAN</option>
+  <option value="SOLAN">SOLAN</option>
+  <option value="SOLAPUR">SOLAPUR</option>
+  <option value="SONBHADRA">SONBHADRA</option>
+  <option value="SONEPUR">SONEPUR</option>
+  <option value="SONIPAT">SONIPAT</option>
+  <option value="SONITPUR">SONITPUR</option>
+  <option value="SOUTH ANDAMANS">SOUTH ANDAMANS</option>
+  <option value="SOUTH DISTRICT">SOUTH DISTRICT</option>
+  <option value="SOUTH GARO HILLS">SOUTH GARO HILLS</option>
+  <option value="SOUTH GOA">SOUTH GOA</option>
+  <option value="SOUTH TRIPURA">SOUTH TRIPURA</option>
+  <option value="SPSR NELLORE">SPSR NELLORE</option>
+  <option value="SRIKAKULAM">SRIKAKULAM</option>
+  <option value="SRINAGAR">SRINAGAR</option>
+  <option value="SULTANPUR">SULTANPUR</option>
+  <option value="SUNDARGARH">SUNDARGARH</option>
+  <option value="SUPAUL">SUPAUL</option>
+  <option value="SURAT">SURAT</option>
+  <option value="SURENDRANAGAR">SURENDRANAGAR</option>
+  <option value="SURGUJA">SURGUJA</option>
+  <option value="TAMENGLONG">TAMENGLONG</option>
+  <option value="TAPI">TAPI</option>
+  <option value="TARN TARAN">TARN TARAN</option>
+  <option value="TAWANG">TAWANG</option>
+  <option value="TEHRI GARHWAL">TEHRI GARHWAL</option>
+  <option value="THANE">THANE</option>
+  <option value="THANJAVUR">THANJAVUR</option>
+  <option value="THE NILGIRIS">THE NILGIRIS</option>
+  <option value="THENI">THENI</option>
+  <option value="THIRUVALLUR">THIRUVALLUR</option>
+  <option value="THIRUVANANTHAPURAM">THIRUVANANTHAPURAM</option>
+  <option value="THIRUVARUR">THIRUVARUR</option>
+  <option value="THOUBAL">THOUBAL</option>
+  <option value="THRISSUR">THRISSUR</option>
+  <option value="TIKAMGARH">TIKAMGARH</option>
+  <option value="TINSUKIA">TINSUKIA</option>
+  <option value="TIRAP">TIRAP</option>
+  <option value="TIRUCHIRAPPALLI">TIRUCHIRAPPALLI</option>
+  <option value="TIRUNELVELI">TIRUNELVELI</option>
+  <option value="TIRUPPUR">TIRUPPUR</option>
+  <option value="TIRUVANNAMALAI">TIRUVANNAMALAI</option>
+  <option value="TONK">TONK</option>
+  <option value="TUENSANG">TUENSANG</option>
+  <option value="TUMKUR">TUMKUR</option>
+  <option value="TUTICORIN">TUTICORIN</option>
+  <option value="UDAIPUR">UDAIPUR</option>
+  <option value="UDALGURI">UDALGURI</option>
+  <option value="UDAM SINGH NAGAR">UDAM SINGH NAGAR</option>
+  <option value="UDHAMPUR">UDHAMPUR</option>
+  <option value="UDUPI">UDUPI</option>
+  <option value="UJJAIN">UJJAIN</option>
+  <option value="UKHRUL">UKHRUL</option>
+  <option value="UMARIA">UMARIA</option>
+  <option value="UNA">UNA</option>
+  <option value="UNNAO">UNNAO</option>
+  <option value="UPPER SIANG">UPPER SIANG</option>
+  <option value="UPPER SUBANSIRI">UPPER SUBANSIRI</option>
+  <option value="UTTAR KANNAD">UTTAR KANNAD</option>
+  <option value="UTTAR KASHI">UTTAR KASHI</option>
+  <option value="VADODARA">VADODARA</option>
+  <option value="VAISHALI">VAISHALI</option>
+  <option value="VALSAD">VALSAD</option>
+  <option value="VARANASI">VARANASI</option>
+  <option value="VELLORE">VELLORE</option>
+  <option value="VIDISHA">VIDISHA</option>
+  <option value="VILLUPURAM">VILLUPURAM</option>
+  <option value="VIRUDHUNAGAR">VIRUDHUNAGAR</option>
+  <option value="VISAKHAPATANAM">VISAKHAPATANAM</option>
+  <option value="VIZIANAGARAM">VIZIANAGARAM</option>
+  <option value="WARANGAL">WARANGAL</option>
+  <option value="WARDHA">WARDHA</option>
+  <option value="WASHIM">WASHIM</option>
+  <option value="WAYANAD">WAYANAD</option>
+  <option value="WEST DISTRICT">WEST DISTRICT</option>
+  <option value="WEST GARO HILLS">WEST GARO HILLS</option>
+  <option value="WEST GODAVARI">WEST GODAVARI</option>
+  <option value="WEST KAMENG">WEST KAMENG</option>
+  <option value="WEST KHASI HILLS">WEST KHASI HILLS</option>
+  <option value="WEST SIANG">WEST SIANG</option>
+  <option value="WEST SINGHBHUM">WEST SINGHBHUM</option>
+  <option value="WEST TRIPURA">WEST TRIPURA</option>
+  <option value="WOKHA">WOKHA</option>
+  <option value="YADGIR">YADGIR</option>
+  <option value="YAMUNANAGAR">YAMUNANAGAR</option>
+  <option value="YANAM">YANAM</option>
+  <option value="YAVATMAL">YAVATMAL</option>
+  <option value="ZUNHEBOTO">ZUNHEBOTO</option>
+  </select>
+</div>
+
+
+
+
+
+
+<div class="form-group">
+  <label for="Crop_Year" style="font-size: 17px">
+  <b>Enter year </b></label>
+  <input
+    type="number"
+    class="form-control"
+    id="Crop_Year"
+    name="Crop_Year"
+    placeholder="Enter the value (example:2025)"
+    style="font-weight: bold"
+    required
+  />
+</div>
+
+
+
+<div class="form-group">
+  <label for="Season" style="font-size: 17px"
+    ><b>select Season</b></label>
+  <select
+    name="Season"
+    class="form-control"
+    id="Season"
+    placeholder="Select a Season"
+    style="font-weight: bold"
+    required
+  > 
+  <option selected>Select season</option>
+    <option>Kharif</option>
+    <option>Rabi</option>
+    <option>Whole Year</option>
+    <option>Autumn</option>
+    <option>Summer</option>
+    <option>Winter</option>
+    
+  </select>
+</div>
+
+
+
+
+
+<div class="form-group">
+  <label for="Crop" style="font-size: 17px"
+    ><b>select Crop</b></label>
+  <select
+    name="Crop"
+    class="form-control"
+    id="Crop"
+    placeholder="Select a Crop"
+    style="font-weight: bold"
+    required
+  > 
+  <option selected>Select Crop</option>
+  <option value="Apple">Apple</option>
+  <option value="Arcanut (Processed)">Arcanut (Processed)</option>
+  <option value="Arecanut">Arecanut</option>
+  <option value="Arhar/Tur">Arhar/Tur</option>
+  <option value="Ash Gourd">Ash Gourd</option>
+  <option value="Atcanut (Raw)">Atcanut (Raw)</option>
+  <option value="Bajra">Bajra</option>
+  <option value="Banana">Banana</option>
+  <option value="Barley">Barley</option>
+  <option value="Beans & Mutter(Vegetable)">Beans & Mutter(Vegetable)</option>
+  <option value="Beet Root">Beet Root</option>
+  <option value="Ber">Ber</option>
+  <option value="Bhindi">Bhindi</option>
+  <option value="Bitter Gourd">Bitter Gourd</option>
+  <option value="Black pepper">Black pepper</option>
+  <option value="Blackgram">Blackgram</option>
+  <option value="Bottle Gourd">Bottle Gourd</option>
+  <option value="Brinjal">Brinjal</option>
+  <option value="Cabbage">Cabbage</option>
+  <option value="Cardamom">Cardamom</option>
+  <option value="Carrot">Carrot</option>
+  <option value="Cashewnut">Cashewnut</option>
+  <option value="Cashewnut Processed">Cashewnut Processed</option>
+  <option value="Cashewnut Raw">Cashewnut Raw</option>
+  <option value="Castor seed">Castor seed</option>
+  <option value="Cauliflower">Cauliflower</option>
+  <option value="Citrus Fruit">Citrus Fruit</option>
+  <option value="Coffee">Coffee</option>
+  <option value="Cond-spcs other">Cond-spcs other</option>
+  <option value="Coriander">Coriander</option>
+  <option value="Cotton(lint)">Cotton(lint)</option>
+  <option value="Cowpea(Lobia)">Cowpea(Lobia)</option>
+  <option value="Cucumber">Cucumber</option>
+  <option value="Drum Stick">Drum Stick</option>
+  <option value="Dry chillies">Dry chillies</option>
+  <option value="Dry ginger">Dry ginger</option>
+  <option value="Garlic">Garlic</option>
+  <option value="Ginger">Ginger</option>
+  <option value="Gram">Gram</option>
+  <option value="Grapes">Grapes</option>
+  <option value="Groundnut">Groundnut</option>
+  <option value="Guar seed">Guar seed</option>
+  <option value="Horse-gram">Horse-gram</option>
+  <option value="Jack Fruit">Jack Fruit</option>
+  <option value="Jowar">Jowar</option>
+  <option value="Jute">Jute</option>
+  <option value="Jute & mesta">Jute & mesta</option>
+  <option value="Kapas">Kapas</option>
+  <option value="Khesari">Khesari</option>
+  <option value="Korra">Korra</option>
+  <option value="Lab-Lab">Lab-Lab</option>
+  <option value="Linseed">Linseed</option>
+  <option value="Litchi">Litchi</option>
+  <option value="Maize">Maize</option>
+  <option value="Mango">Mango</option>
+  <option value="Masoor">Masoor</option>
+  <option value="Mesta">Mesta</option>
+  <option value="Moong(Green Gram)">Moong(Green Gram)</option>
+  <option value="Moth">Moth</option>
+  <option value="Niger seed">Niger seed</option>
+  <option value="Oilseeds total">Oilseeds total</option>
+  <option value="Onion">Onion</option>
+  <option value="Orange">Orange</option>
+  <option value="Other  Rabi pulses">Other Rabi pulses</option>
+  <option value="Other Cereals & Millets">Other Cereals & Millets</option>
+  <option value="Other Citrus Fruit">Other Citrus Fruit</option>
+  <option value="Other Dry Fruit">Other Dry Fruit</option>
+  <option value="Other Fresh Fruits">Other Fresh Fruits</option>
+  <option value="Other Kharif pulses">Other Kharif pulses</option>
+  <option value="Other Vegetables">Other Vegetables</option>
+  <option value="Paddy">Paddy</option>
+  <option value="Papaya">Papaya</option>
+  <option value="Peach">Peach</option>
+  <option value="Pear">Pear</option>
+  <option value="Peas  (vegetable)">Peas (vegetable)</option>
+  <option value="Peas & beans (Pulses)">Peas & beans (Pulses)</option>
+  <option value="Pineapple">Pineapple</option>
+  <option value="Plums">Plums</option>
+  <option value="Pome Fruit">Pome Fruit</option>
+  <option value="Pome Granet">Pome Granet</option>
+  <option value="Potato">Potato</option>
+  <option value="Pulses total">Pulses total</option>
+  <option value="Pump Kin">Pump Kin</option>
+  <option value="Ragi">Ragi</option>
+  <option value="Rapeseed &Mustard">Rapeseed &Mustard</option>
+  <option value="Redish">Redish</option>
+  <option value="Ribed Guard">Ribed Guard</option>
+  <option value="Rice">Rice</option>
+  <option value="Rubber">Rubber</option>
+  <option value="Safflower">Safflower</option>
+  <option value="Samai">Samai</option>
+  <option value="Sannhamp">Sannhamp</option>
+  <option value="Sesamum">Sesamum</option>
+  <option value="Small millets">Small millets</option>
+  <option value="Snak Guard">Snak Guard</option>
+  <option value="Soyabean">Soyabean</option>
+  <option value="Sugarcane">Sugarcane</option>
+  <option value="Sunflower">Sunflower</option>
+  <option value="Sweet potato">Sweet potato</option>
+  <option value="Tapioca">Tapioca</option>
+  <option value="Tea">Tea</option>
+  <option value="Tobacco">Tobacco</option>
+  <option value="Tomato">Tomato</option>
+  <option value="Total foodgrain">Total foodgrain</option>
+  <option value="Turmeric">Turmeric</option>
+  <option value="Turnip">Turnip</option>
+  <option value="Urad">Urad</option>
+  <option value="Varagu">Varagu</option>
+  <option value="Water Melon">Water Melon</option>
+  <option value="Wheat">Wheat</option>
+  <option value="Yam">Yam</option>
+  <option value="other fibres">other fibres</option>
+  <option value="other misc. pulses">other misc. pulses</option>
+  <option value="other oilseeds">other oilseeds</option>
+</select>
+</div>
+
+
+
+
+<div class="form-group">
+  <label for="Area" style="font-size: 17px"
+    ><b>Area</b></label
+  >
+  <input
+    type="number"
+    class="form-control"
+    id="Area"
+    name="Area"
+    placeholder="Enter the value (example:21400)"
+    style="font-weight: bold"
+    required
+  />
+</div>
+
+
+<div class="d-flex justify-content-center">
+  <button
+    type="submit"
+    class="btn btn-info"
+    style="color: black; font-weight: bold; width: 130px; height:50px; border-radius:12px; font-size: 21px;"
+  >
+    Predict
+  </button>
+</div>
+
+  </form>
+</div>
+
+
+
+<!-- Form section -->
+
+{% endblock %}
+
+

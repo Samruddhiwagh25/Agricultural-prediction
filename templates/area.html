@@ -1,0 +1,434 @@
+{% extends 'layout.html' %} {% block body %}
+
+<style>
+  html body {
+    background-color:turquoise;
+  }
+</style>
+<!--Form Section-->
+<br /><br />
+<h2 style="text-align: center; margin: 0px; color: black">
+  <b>Get  Your crop production </b>
+</h2>
+<br />
+
+<div
+  style="
+    width: 350px;
+    height: 40rem;
+    margin: 0px auto;
+    color: black;
+    border-radius: 25px;
+    padding: 10px 10px;
+  "
+>
+  <form method="POST" action="{{ url_for('aprod') }}">
+    
+        
+    
+  <div class="form-group">
+    <label for="statename" style="font-size: 17px"
+      ><b>select state </b></label>
+    <select
+      name="statename"
+      class="form-control"
+      id="statename"
+      placeholder="Select a state"
+      style="font-weight: bold"
+      required
+    >
+      <option selected>Select state</option>
+      <option>Andhra Pradesh</option>
+      <option>Andaman and Nicobar Islands</option>
+      <option>Arunachal Pradesh</option>
+      <option>Assam</option>
+      <option>Bihar</option>
+      <option>Chandigarh</option>
+      <option>Chhattisgarh</option>
+      <option>Dadra and Nagar Haveli</option>
+      <option>Goa</option>
+      <option>Gujarat</option>
+      <option>Haryana</option>
+      <option>Himachal Pradesh</option>
+      <option>Jammu and Kashmir </option>
+      <option>Jharkhand</option>
+      <option>Karnataka</option>
+      <option>Kerala</option>
+      <option>Madhya Pradesh</option>
+      <option>Maharashtra</option>
+      <option>Manipur</option>
+      <option>Meghalaya</option>
+      <option>Mizoram</option>
+      <option>Nagaland</option>
+      <option>Odisha</option>
+      <option>Puducherry</option>
+      <option>Punjab</option>
+      <option>Rajasthan</option>
+      <option>Sikkim</option>
+      <option>Tamil Nadu</option>
+      <option>Telangana </option>
+      <option>Tripura</option>
+      <option>Uttar Pradesh</option>
+      <option>Uttarakhand</option>
+      <option>West Bengal</option>  
+      
+    </select>
+  </div>  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<div class="form-group">
+  <label for="DistrictName" style="font-size: 17px"
+    ><b>Select District  </b></label>
+    
+  <select
+    name="DistrictName"
+    class="form-control"
+    id="DistrictName"
+    placeholder="Select a District"
+    style="font-weight: bold"
+    required
+  >
+    <option selected>Select District</option>
+    <option>Kadapa</option>
+    <option>Krishna</option>
+    <option>Kurnool</option>
+    <option>Prakasam</option>
+    <option>SPSR Nellore</option>
+    <option>Srikakulam</option>
+    <option>Visakhapatnam</option>
+    <option>Vizianagaram</option>
+    <option>West Godavari</option>
+    <option>Changlang</option>
+    <option>Dibang Valley</option>
+    <option>East Kameng</option>
+    <option>East Siang</option>
+    <option>Lohit</option>
+    <option>Lower Subansiri</option>
+    <option>Papum Pare</option>
+    <option>Tawang</option>
+    <option>Tirap</option>
+    <option>Upper Siang</option>
+    <option>Upper Subansiri</option>
+    <option>West Kameng</option>
+    <option>West Siang</option>
+    <option>Barpeta</option>
+    <option>Bongaigaon</option>
+    <option>Cachar</option>
+    <option>Darrang</option>
+    <option>Dhemaji</option>
+    <option>Dhubri</option>
+    <option>Dibrugarh</option>
+    <option>Dima Hasao</option>
+    <option>Goalpara</option>
+    <option>Golaghat</option>
+    <option>Hailakandi</option>
+    <option>Jorhat</option>
+    <option>Kamrup</option>
+    <option>Karbi Anglong</option>
+    <option>Karimganj</option>
+    <option>Kokrajhar</option>
+    <option>Lakhimpur</option>
+    <option>Marigaon</option>
+    <option>Nagaon</option>
+    <option>Nalbari</option>
+    <option>Sivasagar</option>
+    <option>Sonitpur</option>
+    <option>Tinsukia</option>
+    <option>Araria</option>
+    <option>Aurangabad</option>
+    <option>Banka</option>
+    <option>Begusarai</option>
+    <option>Bhagalpur</option>
+    <option>Bhojpur</option>
+    <option>Buxar</option>
+    <option>Darbhanga</option>
+    <option>Gaya</option>
+    <option>Gopalganj</option>
+    <option>Jamui</option>
+    <option>Jehanabad</option>
+    <option>Kaimur (Bhabua)</option>
+    <option>Katihar</option>
+    <option>Khagaria</option>
+    <option>Kishanganj</option>
+    <option>Lakhisarai</option>
+    <option>Madhepura</option>
+    <option>Madhubani</option>
+    <option>Munger</option>
+    <option>Muzaffarpur</option>
+    <option>Nalanda</option>
+    <option>Nawada</option>
+    <option>Pashchim Champaran</option>
+    <option>Patna</option>
+    <option>Purbi Champaran</option>
+    <option>Purnia</option>
+    <option>Rohtas</option>
+    <option>Saharsa</option>
+    <option>Samastipur</option>
+    <option>Saran</option>
+    <option>Sheikhpura</option>
+    <option>Sheohar</option>
+    <option>Sitamarhi</option>
+    <option>Siwan</option>
+    <option>Supaul</option>
+    <option>Vaishali</option>
+    <option>Ahmadabad</option>
+    <option>Amreli</option>
+    <option>Banas Kantha</option>
+    <option>Bharuch</option>
+    <option>Bhavnagar</option>
+    <option>Dang</option>
+    <option>Gandhinagar</option>
+    <option>Jamnagar</option>
+    <option>Junagadh</option>
+    <option>Kachchh</option>
+    <option>Kheda</option>
+    <option>Mahesana</option>
+    <option>Panch Mahals</option>
+    <option>Rajkot</option>
+    <option>Sabar Kantha</option>
+    <option>Surat</option>
+    <option>Surendranagar</option>
+    <option>Vadodara</option>
+    <option>Valsad</option>
+    <option>Ambala</option>
+    <option>Bhiwani</option>
+    <option>Faridabad</option>
+    <option>Fatehabad</option>
+    <option>Gurgaon</option>
+    <option>Hisar</option>
+    <option>Jhajjar</option>
+    <option>Jind</option>
+    <option>Kaithal</option>
+    <option>Karnal</option>
+    <option>Kurukshetra</option>
+    <option>Mahendragarh</option>
+    <option>Panchkula</option>
+    <option>Panipat</option>
+    <option>Rewari</option>
+    <option>Rohtak</option>
+    <option>Sirsa</option>
+    <option>Sonipat</option>
+    <option>Yamunanagar</option>
+    <option>Anantnag</option>
+    <option>Badgam</option>
+    <option>Baramulla</option>
+    <option>Doda</option>
+    <option>Jammu</option>
+    <option>Kargil</option>
+    <option>Kathua</option>
+    <option>Kupwara</option>
+    <option>Leh Ladakh</option>
+    <option>Poonch</option>
+    <option>Pulwama</option>
+    <option>Rajauri</option>
+  </select>
+</div>
+
+
+<div class="form-group">
+  <label for="Crop_Year" style="font-size: 17px">
+  <b>Enter year </b></label>
+  <input
+    type="number"
+    class="form-control"
+    id="Crop_Year"
+    name="Crop_Year"
+    placeholder="Enter the value (example:2025)"
+    style="font-weight: bold"
+    required
+  />
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="form-group">
+  <label for="Season" style="font-size: 17px"
+    ><b> select Season</b></label>
+  <select
+    name="Season"
+    class="form-control"
+    id="Season"
+    placeholder="Select a Season"
+    style="font-weight: bold"
+    required
+  >
+    <option selected>Select season</option>
+    <option>Kharif</option>
+    <option>Rabi</option>
+    <option>Whole Year</option>
+    <option>Autumn</option>
+    <option>Summer</option>
+    <option>Winter</option>
+    
+  </select>
+</div>
+
+
+
+
+<div class="form-group">
+  <label for="Crop" style="font-size: 17px"
+    ><b>select Crop </b></label>
+  <select
+    name="Crop"
+    class="form-control"
+    id="Crop"
+    placeholder="Select a Crop"
+    style="font-weight: bold"
+    required
+    
+   >
+   <option selected>Select crop</option>
+   <option>Arhar/Tur</option>
+   <option>Bajra</option>
+   <option>Castor seed</option>
+   <option>Cotton(lint)</option>   
+   <option>Dry chillies</option>
+   <option>Groundnut</option>
+   <option>Horse-gram</option>
+   <option>Jowar</option>
+   <option>Korra</option>
+   <option>Maize</option>
+   <option>Moong(Green Gram)</option>
+   <option>Other Kharif pulses</option>
+   <option>Ragi</option>
+   <option>Rice</option>
+   <option>Sugarcane</option>
+   <option>Sunflower</option>
+   <option>Tobacco</option>
+   <option>Gram</option>
+   <option>Wheat</option>
+   <option>Samai</option>
+   <option>Sesamum</option>
+   <option>Urad</option>
+   <option>Small millets</option>
+   <option>Varagu</option>
+   <option>Mesta</option>
+   <option>Soyabean</option>
+   <option>Rapeseed &Mustard</option>
+   <option>Oilseeds total</option>
+   <option>Jute</option>
+   <option>Linseed</option>
+   <option>Other Rabi pulses</option>
+   <option>Arecanut</option>
+   <option>Niger seed</option>
+   <option>Onion</option>
+   <option>Potato</option>
+   <option>Sweet potato</option>
+   <option>Tapioca</option>
+   <option>Turmeric</option>
+   <option>Dry ginger</option>
+   <option>Barley</option>
+   <option>Banana</option>
+   <option>Coriander</option>
+   <option>Garlic</option>
+   <option>Sannhamp</option>
+   <option>Safflower</option>
+   <option>Moth</option>
+   <option>Pulses total</option>
+   <option>Paddy</option>
+   <option>Black pepper</option>
+   <option>ardamom</option>
+   <option>Cashewnut</option>
+   <option>Total foodgrain</option>
+   <option>Kapas</option>
+   <option>Peas & beans (Pulses)</option>
+   <option>Masoor</option>
+   <option>Khesari</option>
+   <option>Blackgram</option>
+   <option>Other Cereals & Millets</option>
+   <option>other oilseeds</option>
+   <option>Cond-spcs other</option>
+   <option>Tea</option>
+   <option>Guar seed</option>
+   <option>Jute & mesta</option>
+   <option>other misc. pulses</option>
+   <option>Rubber</option>
+   <option>Coffee</option>
+   <option>Beans & Mutter(Vegetable)</option>
+   <option>Bhindi</option>
+   <option>Brinjal</option>
+   <option>Citrus Fruit</option>
+   <option>Cucumber</option>
+   <option>Grapes</option>
+   <option>Mango</option>
+   <option>Orange</option>
+   <option>other fibres</option>
+   <option>Other Fresh Fruits</option>
+   <option>Other Vegetables</option>
+   <option>Papaya</option>
+   <option>Pome Fruit</option>
+   <option>Tomato</option>
+   <option>Cabbage</option>
+   <option>Peas  (vegetable)</option>
+   <option>Bottle Gourd</option>
+   <option>Pineapple</option>
+   <option>Turnip</option>
+   <option>Carrot</option>
+   <option>Redish</option>
+   <option>Arcanut (Processed)</option>
+   <option>Atcanut (Raw)</option>
+   <option>Cashewnut Processed</option>
+   <option>Cashewnut Raw</option>
+   <option>Bitter Gourd</option>
+   <option>Drum Stick</option>
+   <option>Jack Fruit</option>
+   <option>Snak Guard</option>
+   <option>Cauliflower</option>
+   <option>Water Melon</option>
+    </select>
+  </div>
+
+  
+    <div class="form-group">
+      <label for="Area" style="font-size: 17px"
+        ><b>Enter Area in hector </b></label>
+      <input
+        type="number"
+        class="form-control"
+        id="Area"
+        name="Area"
+        placeholder="Enter the value (example:200000.0)"
+        style="font-weight: bold"
+        required
+      />
+    </div>
+
+
+
+ <div class="d-flex justify-content-center">
+      <button
+        type="submit"
+        class="btn btn-info"
+        style="color: black; font-weight: bold; width: 130px; height:50px; border-radius:12px; font-size: 21px;"
+      >
+        Predict
+      </button>
+    </div>
+
+
+
+   
+  </form>
+</div>
+{% endblock %}
